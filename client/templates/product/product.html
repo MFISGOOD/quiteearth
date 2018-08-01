@@ -1,0 +1,36 @@
+<template name="product">
+	<div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+			<h4 class="text-center">
+				<span class="label label-warning">{{category.name}}</span>
+			</h4>
+			<img src="/images/appel-crisp.png" alt="AppleCrisp" class="img-responsive">
+			<div class="caption">
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<h5>{{truncate name 10}}</h5>
+					</div>
+					<div class="col-md-6 col col-xs-6 price">
+						<h4><label for="">${{price}}</label></h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<i class="{{ratings 1 rating}} fa fa-star"></i>
+						<i class="{{ratings 2 rating}} fa fa-star"></i>
+						<i class="{{ratings 3 rating}} fa fa-star"></i>
+						<i class="{{ratings 4 rating}} fa fa-star"></i>
+						<i class="{{ratings 5 rating}} fa fa-star"></i>
+					</div>
+					<div class="col-md-6">
+						<button class="btn btn-success btn-product addToCart">
+							<span class="fa fa-shopping-cart"></span>
+						Buy
+					   </button>
+				</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</template>

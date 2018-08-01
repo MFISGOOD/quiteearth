@@ -1,0 +1,12 @@
+li .item-left{
+	float: left;
+}
+li .item-right{
+	float: right;
+}
+li#cartitems{
+	clear: both;
+}
+.item-left img{
+	height: 45px;
+}

@@ -1,0 +1,37 @@
+<template name="profile">
+	<div class="col-md-6">
+		<h2 class="head-snippet">User Profile</h2>
+		<form action="">
+			<div class="form-group">
+				<label for="" class="control-label">First Name</label>
+				<input type="text" class="form-control input-sm" id="firstname" value="{{currentUser.profile.firstname}}">
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label">Last Name</label>
+				<input type="text" class="form-control input-sm" id="lastname" value="{{currentUser.profile.lastname}}">
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label">Email</label>
+				<input type="text" class="form-control input-sm" id="email" value="{{currentUser.profile.email}}">
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label">Password</label>
+				<input type="text" class="form-control input-sm" id="password" value="{{currentUser.profile.password}}">
+			</div>	
+			<label for="" class="control-label">Avatar</label>
+				<div class="col-md-12">
+				<div class="col-md-6">
+					<span  class="btn btn-success btn-file">
+					<input type="file" accept=".gif, .jpg, .png" class="myFileInput" id="avatar">
+					</span>
+				</div>
+				<div class="col-md-6">
+					<img src="{{currentUser.profile.avatar}}" alt="Avatar" width="40px" class="img-circle avatar-upload">
+				</div>
+			</div>
+			<div class="col-md-12">
+				<button type="submit" class="btn btn-info ">Save Profile</button>
+			</div>
+		</form>
+	</div>
+</template>

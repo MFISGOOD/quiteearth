@@ -1,0 +1,27 @@
+<template name="header">
+	<nav  role="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="/admin" class="navbar-brand">Quiet Earth</a>
+			</div>
+			<div class="collapse navbar-collapse" id="main-nav">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/home">Home</a></li>
+		      		<li><a href="/admin">Admin</a></li>
+		      		<li><a href="/profile">My Profile</a></li>
+		      		<li><a href="/cart"><i class="fa fa-shopping-cart"> Cart</i></a></li>
+			     </ul>	
+			     <div class="navbar-right plain">
+					  {{#if currentUser}}
+					  		<a href="/signout" class="btn btn-danger navbar-btn">
+					  			<img  class="img img-circle" width="20px" src="{{currentUser.profile.avatar}}" alt="Avatar"> Sign Out {{currentUser.profile.firstname}}
+					  		</a>
+					   {{else}}
+					  		<a href="/signin" class="btn btn-default navbar-btn">Sign In</a>
+					  		<a href="/register" class="btn btn-primary navbar-btn">Register</a>
+					  {{/if}}
+			    </div>	          
+		   </div>
+		 </div>  
+	</nav>
+</template>
